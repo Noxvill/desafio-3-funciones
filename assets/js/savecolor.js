@@ -31,7 +31,51 @@ alert(colorvar)
         colorvar = "Celeste"
         alert(colorvar)
 
-    }});
+    }
+
+    else if (event.key === "q" || event.key === "Q") {
+        // Si es "D" o "d", llamamos a la función eliminarElemento
+
+        let colora = document.getElementById("key")
+        color= 'purple'
+        colorvar = "Morado"
+        alert(colorvar)
+        createNewDiv(color)
+
+
+
+
+    }
+
+    else if (event.key === "w" || event.key === "W") {
+        // Si es "D" o "d", llamamos a la función eliminarElemento
+
+        let colora = document.getElementById("key")
+        color= 'gray'
+        colorvar = "Gris"
+        alert(colorvar)
+        createNewDiv(color)
+
+    }
+   else if (event.key === "e" || event.key === "E") {
+        // Si es "D" o "d", llamamos a la función eliminarElemento
+
+        let colora = document.getElementById("key")
+        color= 'Brown'
+        colorvar = "Café"
+        alert(colorvar)
+        createNewDiv(color)
+
+
+
+
+   }
+
+    }
+
+
+
+);
 
 // Función pinntar
 
@@ -40,27 +84,13 @@ function pintar(colora, color) {
     
 }
 
-    // Función crear elemento
+// Función agregar elemento div
 
-    function agregarElemento() {
-        // Obtenemos el elemento contenedor por su ID
-        contenedor = document.getElementById("contenedor");
-        // Creamos un nuevo elemento <div>
-        nuevoElemento = document.createElement("div");
-        // Asignamos un texto al nuevo elemento
-        nuevoElemento.textContent = "Elemento agregado";
-        // Agregamos el nuevo elemento al contenedor
-        contenedor.appendChild(nuevoElemento);
-        }
-
-    // Función eliminar elemento    
-    function eliminarElemento() {
-        contenedor = document.getElementById("contenedor");
-        // Obtenemos todos los elementos <div> dentro del contenedor
-        elementos = contenedor.querySelectorAll("div");
-        // Verificamos si hay elementos para eliminar
-        if (elementos.length > 0) {
-        // Eliminamos el último elemento agregado
-        contenedor.removeChild(elementos[elementos.length - 1]);
-        }
-        }
+function createNewDiv(color) {
+    const newDiv = document.createElement("div");
+    newDiv.style.width = "200px";
+    newDiv.style.height = "200px";
+    newDiv.style.margin = "50px";
+    newDiv.style.backgroundColor = color;
+    document.body.appendChild(newDiv);
+}
