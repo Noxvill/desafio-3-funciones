@@ -1,3 +1,3 @@
-ejemplo = function(a, b, c){
+const ejemplo = (a, b, c) => {
     return a+b+c
     }
